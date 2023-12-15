@@ -1,0 +1,54 @@
+
+* {
+    margin: 0px;
+
+}
+
+.bg-container {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(123, 108, 108);
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    height: 50px;
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 0px;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+hr {
+    width: 580px;
+}
+.button {
+    background-color: rgb(71, 77, 77);
+    border-width: 0px ;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.generator {
+    padding-left: 50px;
+}
+h2 {
+    font-size: 60px;
+    color: white;
+}
+
+h1 {
+    font-size: 70px;
+    color: rgb(55, 70, 40)
+}
+
+.fa-solid {
+    color: white;
+    cursor: pointer;
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/f4f647b8bf.js" crossorigin="anonymous"></script>
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="bg-container">
+        <div class="generator">
+            <h2>Generate a</h2>
+            <h1>Random Password</h1>
+            <hr />
+            <input type="text" class="input" placeholder="Password" id="input"/> <i class="fa-solid fa-copy" onclick="copy()"></i> <br/>
+            <button type="button" class="button" onclick="generator()">Generate</button>
+        </div>
+    </div>
+    <script>
+        let inputEl = document.getElementById("input")
+        let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let lowerCase = "abcdefghijklmnopqrstuvwxyz"
+        let symboles = "!@#$%^&*()?~><"
+        let numbers = "1234567890"
+        let total = upperCase + lowerCase + symboles + numbers
+        let length = 12
+        function generator() {
+            let password = ""
+            password += upperCase[Math.floor(Math.random() * upperCase.length)];
+            password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+            password += numbers[Math.floor(Math.random() * numbers.length)];
+            password += symboles[Math.floor(Math.random() * symboles.length)];
+            while (password.length < 12) {
+                password += total[Math.floor(Math.random() * total.length)]
+            }
+            inputEl.value = password
+        }
+
+        function copy() {
+                let passwordInput = document.getElementById("input");
+                passwordInput.select();
+                document.execCommand("copy");
+                alert("Password Copied")
+                passwordInput.value= ""
+        }
+    </script>
+</body>
+</html>
